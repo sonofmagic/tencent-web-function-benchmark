@@ -1,0 +1,32 @@
+app: web-type-scf
+stage: dev
+component: scf
+name: web-type-scf-instance
+inputs:
+  name: ${name}
+  region: ap-shanghai
+  runtime: Nodejs12.16
+  src:
+    src: ../../
+    exclude:
+      - .env
+      - package-lock.json
+      - package.json
+      - Dockerfile
+      - deploy/**
+      - Dockerfile*
+      - workspace.code-workspace
+  type: web
+  handler: scf_bootstrap
+  events:
+    - apigw:
+        parameters:
+          protocols:
+            - http
+            - https
+          environment: release
+          endpoints:
+            - path: /
+              method: ANY
+              function:
+                type: web

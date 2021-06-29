@@ -1,0 +1,26 @@
+app: event2http-proxy-component
+stage: dev
+component: express
+name: event2http-proxy-component-express
+inputs:
+  region: ap-shanghai
+  src:
+    src: ../../
+    exclude:
+      - .env
+      - package-lock.json
+      - package.json
+      - Dockerfile
+      - deploy/**
+      - Dockerfile*
+      - workspace.code-workspace
+  functionConf:
+    name: ${name}
+    runtime: Nodejs12.16
+    # layers:
+    #   - name: single-express
+    #     version: 1
+  apigatewayConf:
+    protocols:
+      - http
+      - https
