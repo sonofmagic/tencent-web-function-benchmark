@@ -11,6 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "autocannon": "^7.3.0",
+    "autocannon-reporter": "^1.1.0",
     "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "eslint": "7.12.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1"
   }
 }
