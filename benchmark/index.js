@@ -28,7 +28,7 @@ const queue = [
   }
 ]
 
-function wait (ts = 3000) {
+function wait (ts = 1000) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve()
@@ -42,13 +42,16 @@ const path = require('path')
 ;(async () => {
   try {
     for (const q of queue) {
-      const reportOutputPath = path.join(process.cwd, `${q.name}.html`)
+      const reportOutputPath = path.join(process.cwd(), `${q.name}.html`)
+      // connections 10
+      // pipelining 1
+      // duration 10
       const result = await autocannon({
         url: q.url
       })
 
-      reporter.buildReport(result) // the html structure
-      reporter.writeReport(result, reportOutputPath, (err, res) => {
+      const report = reporter.buildReport(result) // the html structure
+      reporter.writeReport(report, reportOutputPath, (err, res) => {
         if (err) console.err('Error writting report: ', err)
         else console.log('Report written to: ', reportOutputPath)
       })
