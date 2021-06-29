@@ -1,13 +1,13 @@
 app: web-type-scf
 stage: dev
 component: scf
-name: web-type-scf-instance
+name: web-type-scf-instance-Nodejs12.16
 inputs:
   name: ${name}
   region: ap-shanghai
   runtime: Nodejs12.16
   src:
-    src: ../../
+    src: ../../../
     exclude:
       - .env
       - package-lock.json

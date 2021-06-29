@@ -1,11 +1,11 @@
 app: event2http-proxy-component
 stage: dev
 component: express
-name: event2http-proxy-component-express
+name: event2http-proxy-component-express-Nodejs12.16
 inputs:
   region: ap-shanghai
   src:
-    src: ../../
+    src: ../../../
     exclude:
       - .env
       - package-lock.json
