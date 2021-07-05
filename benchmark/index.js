@@ -20,22 +20,22 @@ const webTypeCustomImageNode14 =
 const webTypeCustomImageNode16 =
   'https://service-2jglye19-1257725330.sh.apigw.tencentcs.com'
 const queue = [
-  // {
-  //   name: 'event-node10',
-  //   url: eventSCFUrlNode10
-  // },
-  // {
-  //   name: 'event-node12',
-  //   url: eventSCFUrlNode12
-  // },
-  // {
-  //   name: 'normal-web-node10',
-  //   url: webTypeSCFUrlNode10
-  // },
-  // {
-  //   name: 'normal-web-node12',
-  //   url: webTypeSCFUrlNode12
-  // },
+  {
+    name: 'event-node10',
+    url: eventSCFUrlNode10
+  },
+  {
+    name: 'event-node12',
+    url: eventSCFUrlNode12
+  },
+  {
+    name: 'normal-web-node10',
+    url: webTypeSCFUrlNode10
+  },
+  {
+    name: 'normal-web-node12',
+    url: webTypeSCFUrlNode12
+  }
   // {
   //   name: 'custom-web-node10',
   //   url: webTypeCustomImageNode10
@@ -52,10 +52,10 @@ const queue = [
   //   name: 'custom-web-node16',
   //   url: webTypeCustomImageNode16
   // }
-  {
-    name: 'self-host',
-    url: 'http://localhost:9000/'
-  }
+  // {
+  //   name: 'self-host',
+  //   url: 'http://localhost:9000/'
+  // }
 ]
 
 function wait (ts = 1000) {
@@ -71,11 +71,12 @@ const path = require('path')
 
 ;(async () => {
   try {
-    const duration = 10
+    const duration = 20
     for (const q of queue) {
       const reportOutputPath = path.join(
         process.cwd(),
         duration.toString(),
+        '/10instances',
         `/${q.name}.html`
       )
       // connections 10
