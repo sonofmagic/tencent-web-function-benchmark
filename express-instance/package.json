@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./sls.js",
+    "dev": "node ./listener.js",
     "deploy:event": "npm run deploy:event:10 && npm run deploy:event:12",
     "deploy:event:10": "components deploy --target ./deploy/event/10",
     "deploy:event:12": "components deploy --target ./deploy/event/12",
