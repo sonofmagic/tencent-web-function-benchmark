@@ -18,7 +18,7 @@ const webTypeCustomImageNode14 =
   'https://service-h8xv1r41-1257725330.sh.apigw.tencentcs.com'
 
 const webTypeCustomImageNode16 =
-  'https://service-2jglye19-1257725330.sh.apigw.tencentcs.com/'
+  'https://service-2jglye19-1257725330.sh.apigw.tencentcs.com'
 const queue = [
   {
     name: 'event-node10',
@@ -67,18 +67,24 @@ const path = require('path')
 
 ;(async () => {
   try {
+    const duration = 20
     for (const q of queue) {
-      const reportOutputPath = path.join(process.cwd(), `${q.name}.html`)
+      const reportOutputPath = path.join(
+        process.cwd(),
+        duration.toString(),
+        `/${q.name}.html`
+      )
       // connections 10
       // pipelining 1
       // duration 10
       const result = await autocannon({
-        url: q.url
+        url: q.url,
+        duration
       })
 
       const report = reporter.buildReport(result) // the html structure
       reporter.writeReport(report, reportOutputPath, (err, res) => {
-        if (err) console.err('Error writting report: ', err)
+        if (err) console.error('Error writting report: ', err)
         else console.log('Report written to: ', reportOutputPath)
       })
       await wait()
