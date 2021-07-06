@@ -10,11 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ansicolor": "^1.1.95",
     "autocannon": "^7.3.0",
     "autocannon-reporter": "^1.1.0",
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "strip-ansi": "^7.0.0"
   },
   "devDependencies": {
+    "@types/autocannon": "^4.1.0",
     "eslint": "7.12.1",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "2.22.1",

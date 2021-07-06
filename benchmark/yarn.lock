@@ -44,10 +44,22 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@types/autocannon@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.nlark.com/@types/autocannon/download/@types/autocannon-4.1.0.tgz#be11908d3455c01a8603f86500090564332c099d"
+  integrity sha1-vhGQjTRVwBqGA/hlAAkFZDMsCZ0=
+  dependencies:
+    "@types/node" "*"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.nlark.com/@types/json5/download/@types/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+
+"@types/node@*":
+  version "16.0.0"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.0.0.tgz#067a6c49dc7a5c2412a505628e26902ae967bf6f"
+  integrity sha1-BnpsSdx6XCQSpQVijiaQKulnv28=
 
 acorn-jsx@^5.3.1:
   version "5.3.1"
@@ -84,6 +96,11 @@ ansi-regex@^5.0.0:
   resolved "https://registry.npm.taobao.org/ansi-regex/download/ansi-regex-5.0.0.tgz?cache=0&sync_timestamp=1618553044693&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-regex%2Fdownload%2Fansi-regex-5.0.0.tgz#388539f55179bf39339c81af30a654d69f87cb75"
   integrity sha1-OIU59VF5vzkznIGvMKZU1p+Hy3U=
 
+ansi-regex@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.nlark.com/ansi-regex/download/ansi-regex-6.0.0.tgz#ecc7f5933cbe5ac7b33e209a5ff409ab1669c6b2"
+  integrity sha1-7Mf1kzy+WsezPiCaX/QJqxZpxrI=
+
 ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.nlark.com/ansi-styles/download/ansi-styles-3.2.1.tgz?cache=0&sync_timestamp=1618995588464&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fansi-styles%2Fdownload%2Fansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -97,6 +114,11 @@ ansi-styles@^4.1.0:
   integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
   dependencies:
     color-convert "^2.0.1"
+
+ansicolor@^1.1.95:
+  version "1.1.95"
+  resolved "https://registry.nlark.com/ansicolor/download/ansicolor-1.1.95.tgz#978c494f04793d6c58115ba13a50f56593f736c6"
+  integrity sha1-l4xJTwR5PWxYEVuhOlD1ZZP3NsY=
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -228,7 +250,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.1:
   version "4.1.1"
   resolved "https://registry.nlark.com/chalk/download/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
   integrity sha1-yAs/qyi/Y3HmhjMl7uZ+YYt35q0=
@@ -1540,6 +1562,13 @@ strip-ansi@^6.0.0:
   integrity sha1-CxVx3XZpzNTz4G4U7x7tJiJa5TI=
   dependencies:
     ansi-regex "^5.0.0"
+
+strip-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npm.taobao.org/strip-ansi/download/strip-ansi-7.0.0.tgz?cache=0&sync_timestamp=1618553320591&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstrip-ansi%2Fdownload%2Fstrip-ansi-7.0.0.tgz#1dc49b980c3a4100366617adac59327eefdefcb0"
+  integrity sha1-HcSbmAw6QQA2ZhetrFkyfu/e/LA=
+  dependencies:
+    ansi-regex "^6.0.0"
 
 strip-bom@^3.0.0:
   version "3.0.0"
